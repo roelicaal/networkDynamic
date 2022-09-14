@@ -795,8 +795,7 @@ get.edge.activity <- function(x, e=seq_along(x$mel), as.spellList=FALSE,active.d
 }
 
 get.vertex.activity <- function(x, v=seq_len(network.size(x)), as.spellList=FALSE,active.default=TRUE) {
-  if((min(v,Inf) < 1) || (max(v,-Inf) > network.size(x))) 
-    stop("Illegal vertex in get.vertex.activity.\n")  
+
   
   if (as.spellList) {
     return(get.vertex.spelllist(x, v=v,active.default=active.default))
