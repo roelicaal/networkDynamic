@@ -135,6 +135,7 @@ activate.vertices <- function(x, onset=NULL, terminus=NULL, length=NULL, at=NULL
   }
   if(!is.vector(v) || !is.numeric(v))
     stop("Vertex ID's, v, must be a numeric vector in activate.vertices.\n")
+  # Code was here
 
   # preliminaries
   v <- v[!sapply(x$val[v], is.null)]  #Filter out non-vertices
