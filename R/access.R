@@ -135,8 +135,6 @@ activate.vertices <- function(x, onset=NULL, terminus=NULL, length=NULL, at=NULL
   }
   if(!is.vector(v) || !is.numeric(v))
     stop("Vertex ID's, v, must be a numeric vector in activate.vertices.\n")
-  if((min(v,Inf) < 1) || (max(v,-Inf) > network.size(x))) 
-    stop("Illegal vertex in activate.vertices.\n")
 
   # preliminaries
   v <- v[!sapply(x$val[v], is.null)]  #Filter out non-vertices
