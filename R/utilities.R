@@ -471,7 +471,7 @@ networkDynamic <- function(base.net=NULL,edge.toggles=NULL,vertex.toggles=NULL,
     
     # ---- initialize base.net ----
     # fill in base network if it is not given
-    max.vertex <- max(vertex.data[,'vertex.id'], edge.data[,'tail'], edge.data[,'head'],0)
+    max.vertex <- max(length(unique(vertex.data[,'vertex.id'])), length(unique(edge.data[,'tail'])), length(unique(edge.data[,'head'])),0)
     if (is.null(base.net)){
       if (verbose){
         cat(paste("Initializing base.net of size",max.vertex,"imputed from maximum vertex id in edge records\n"))
